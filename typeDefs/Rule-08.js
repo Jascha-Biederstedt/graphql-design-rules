@@ -34,7 +34,7 @@ exports.typeDefs = gql`
     applyFeaturesSeparately: Boolean!
   }
 
-  type GroupFeature {
+  type GroupFeatures {
     feature: String!
   }
 `;

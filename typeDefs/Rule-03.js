@@ -1,4 +1,4 @@
-// Rule #2: Design your API around your business domain.
+// Rule #3: Design your API around your business domain.
 
 const { ApolloServer, gql } = require('apollo-server');
 

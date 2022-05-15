@@ -24,7 +24,7 @@ exports.typeDefs = gql`
     bodyHtml: String!
   }
 
-  type GroupFeature {
+  type GroupFeatures {
     feature: String!
   }
 `;

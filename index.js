@@ -1,6 +1,6 @@
-const { ApolloServer } = require("apollo-server");
+const { ApolloServer, gql } = require('apollo-server');
 
-exports.typeDefs = gql`
+const typeDefs = gql`
   type Query {
     cars: [Car!]!
   }
@@ -10,13 +10,33 @@ exports.typeDefs = gql`
     color: String!
     make: String!
   }
+
+  type ManualGroup {
+    id: ID!
+    name: String!
+    imageId: ID!
+    bodyHtml: String!
+  }
+
+  type AutomaticGroup {
+    id: ID!
+    name: String!
+    imageId: ID!
+    bodyHtml: String!
+    feature: [AutomaticGroupFeatures!]!
+    applyFeaturesSeperately: Boolean!
+  }
+
+  type AutomaticGroupFeatures {
+    column: String!
+  }
 `;
 
 const server = new ApolloServer({
   typeDefs,
   resolvers: {
     Query: {
-      cars: () => [{ id: 1, color: "blue", make: "Toyota" }],
+      cars: () => [{ id: 1, color: 'blue', make: 'Toyota' }],
     },
   },
 });

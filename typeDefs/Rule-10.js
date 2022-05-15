@@ -1,4 +1,4 @@
-// Rule #9: The API should provide business logic,
+// Rule #10: The API should provide business logic,
 // not just the data.
 
 const { ApolloServer, gql } = require('apollo-server');

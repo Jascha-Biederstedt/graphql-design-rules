@@ -44,7 +44,7 @@ exports.typeDefs = gql`
   }
 
   type GroupFeatures {
-    feature: String!
+    feature: GroupFeatureFields!
   }
 
   enum GroupFeatureFields {
